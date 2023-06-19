@@ -1,0 +1,8 @@
+templateDir: /local/mytmpl/templates
+files:
+  router.mustache:
+    templateType: SupportingFiles
+    destinationFilename: router.go
+  interfaces.mustache:
+    templateType: SupportingFiles
+    destinationFilename: interfaces.go

@@ -1,0 +1,15 @@
+package handlers
+{{#operations}}
+import (
+    "github.com/labstack/echo/v4"
+    "net/http"
+){{#operation}}
+
+// {{nickname}} - {{{summary}}}
+{{#isDeprecated}}
+// Deprecated
+{{/isDeprecated}}
+func (c *Container) {{operationId}}(ctx echo.Context) error {
+    return ctx.JSON(http.StatusOK, struct{}{})
+}
+{{/operation}}{{/operations}}

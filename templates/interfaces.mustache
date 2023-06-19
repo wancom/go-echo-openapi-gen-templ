@@ -1,0 +1,12 @@
+package main
+
+import (
+    "github.com/labstack/echo/v4"
+)
+{{#apiInfo}}{{#apis}}{{#operations}}
+type {{{classname}}} interface { {{#operation}}
+	// {{nickname}} - {{{summary}}}
+	{{operationId}}(ctx echo.Context) error
+{{/operation}}
+}
+{{/operations}}{{/apis}}{{/apiInfo}}
